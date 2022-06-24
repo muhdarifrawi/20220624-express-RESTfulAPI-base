@@ -5,10 +5,16 @@ const port = 3000
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+
+async function main(){
+    app.get('/', (req, res) => {
+        res.send('Express is running.')
+    })
+    
+}
+
+main();
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Listening on port ${port}`)
 })
